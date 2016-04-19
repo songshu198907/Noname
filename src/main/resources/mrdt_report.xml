@@ -1,0 +1,1011 @@
+<report expressionLocale="en-us" xmlns="http://developer.cognos.com/schemas/report/12.0/">
+    <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/4.0/" to "http://developer.cognos.com/schemas/report/12.0/" at 2015-5-28. 16:34:18-->
+    <modelPath>/content/package[@name='REQST_MRDT_METADATA']/model[@name='model']</modelPath>
+    <layouts>
+        <layout>
+            <reportPages>
+                <page name="Page1">
+                    <style>
+                        <defaultStyles>
+                            <defaultStyle refStyle="pg"/>
+                        </defaultStyles>
+                    </style>
+                    <pageBody>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="pb"/>
+                            </defaultStyles>
+                        </style>
+                        <contents>
+                            <list horizontalPagination="true" name="List1" refQuery="Compare">
+                                <style>
+                                    <CSS value="border-collapse:collapse"/>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="ls"/>
+                                    </defaultStyles>
+                                </style>
+                                <listColumns>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="VIEW_ONLY_Firm ID"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="VIEW_ONLY_Firm ID"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="VIEW_ONLY_Report Month"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="VIEW_ONLY_Report Month"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FilingID"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FilingID"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="VIEW_ONLY_ReportType"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="VIEW_ONLY_ReportType"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="Firm Name"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="Firm Name"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel
+                                                                refDataItem="REPORTED A ONE MONTH AI % INCREASE OF"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue
+                                                                refDataItem="REPORTED A ONE MONTH AI % INCREASE OF"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel
+                                                                refDataItem="(({I:3850} -{I:3850@CM(-1)}) / {I:3850@CM(-1)})*100"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                                <dataFormat>
+                                                    <percentFormat decimalSize="2" percentSymbol="%"
+                                                                   useGrouping="true"/>
+                                                </dataFormat>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue
+                                                                refDataItem="(({I:3850} -{I:3850@CM(-1)}) / {I:3850@CM(-1)})*100"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel
+                                                                refDataItem="AND/OR A 3 MONTH INCREASE IN AI % OF"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue
+                                                                refDataItem="AND/OR A 3 MONTH INCREASE IN AI % OF"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel
+                                                                refDataItem="(({I:3850} -{I:3850@CM(-3)}) / {I:3850@CM(-3)})*100"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                                <dataFormat>
+                                                    <percentFormat decimalSize="2" percentSymbol="%"
+                                                                   useGrouping="true"/>
+                                                </dataFormat>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue
+                                                                refDataItem="(({I:3850} -{I:3850@CM(-3)}) / {I:3850@CM(-3)})*100"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel
+                                                                refDataItem="AS ASSETS FOR 3 MONTHS INCREASED BY"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue
+                                                                refDataItem="AS ASSETS FOR 3 MONTHS INCREASED BY"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="{I:0940} -{I:0940@CM(-3)}"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                                <dataFormat>
+                                                    <currencyFormat currencyCode="USD" decimalSize="0"
+                                                                    useGrouping="true"/>
+                                                </dataFormat>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="{I:0940} -{I:0940@CM(-3)}"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                </listColumns>
+                            </list>
+                        </contents>
+                    </pageBody>
+                    <pageHeader>
+                        <contents>
+                            <block>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="ta"/>
+                                    </defaultStyles>
+                                </style>
+                                <contents>
+                                    <textItem>
+                                        <style>
+                                            <defaultStyles>
+                                                <defaultStyle refStyle="tt"/>
+                                            </defaultStyles>
+                                        </style>
+                                        <dataSource>
+                                            <staticValue>AI % INCREASING / ASSETS INCREASING-H</staticValue>
+                                        </dataSource>
+                                    </textItem>
+                                </contents>
+                            </block>
+                            <textItem>
+                                <dataSource>
+                                    <staticValue>StarMatrix Query Id 1027343</staticValue>
+                                </dataSource>
+                            </textItem>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="ph"/>
+                            </defaultStyles>
+                            <CSS value="padding-bottom:10px;text-align:center"/>
+                        </style>
+                    </pageHeader>
+                    <pageFooter>
+                        <contents>
+                            <table>
+                                <tableRows>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <date>
+                                                        <style>
+                                                            <dataFormat>
+                                                                <dateFormat/>
+                                                            </dataFormat>
+                                                        </style>
+                                                    </date>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:left;width:25%"/>
+                                                </style>
+                                            </tableCell>
+                                            <tableCell>
+                                                <contents>
+                                                    <pageNumber/>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:center;width:50%"/>
+                                                </style>
+                                            </tableCell>
+                                            <tableCell>
+                                                <contents>
+                                                    <time>
+                                                        <style>
+                                                            <dataFormat>
+                                                                <timeFormat/>
+                                                            </dataFormat>
+                                                        </style>
+                                                    </time>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:right;width:25%"/>
+                                                </style>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                </tableRows>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="tb"/>
+                                    </defaultStyles>
+                                    <CSS value="border-collapse:collapse;width:100%"/>
+                                </style>
+                            </table>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="pf"/>
+                            </defaultStyles>
+                            <CSS value="padding-top:10px"/>
+                        </style>
+                    </pageFooter>
+                </page>
+            </reportPages>
+            <promptPages>
+                <page name="Prompt Page1">
+                    <pageHeader>
+                        <contents>
+                            <block>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="ta"/>
+                                    </defaultStyles>
+                                </style>
+                                <contents>
+                                    <textItem>
+                                        <style>
+                                            <defaultStyles>
+                                                <defaultStyle refStyle="tt"/>
+                                            </defaultStyles>
+                                        </style>
+                                        <dataSource>
+                                            <staticValue>AI % INCREASING / ASSETS INCREASING-H</staticValue>
+                                        </dataSource>
+                                    </textItem>
+                                </contents>
+                            </block>
+                            <textItem>
+                                <dataSource>
+                                    <staticValue>StarMatrix Query Id 1027343</staticValue>
+                                </dataSource>
+                            </textItem>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="ph"/>
+                            </defaultStyles>
+                            <CSS value="padding-bottom:10px;text-align:center"/>
+                        </style>
+                    </pageHeader>
+                    <pageBody>
+                        <contents>
+                            <table>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="tb"/>
+                                    </defaultStyles>
+                                    <CSS value="border-collapse:collapse;width:100%"/>
+                                </style>
+                                <tableRows>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Filing ID</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Enter The Value:</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textBox multiSelect="true" parameter="FilingID" required="false"/>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Report Type</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Enter The Value:</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <selectValue multiSelect="true" parameter="ReportType"
+                                                                 refQuery="CM-0" required="false"
+                                                                 selectValueUI="listBox">
+                                                        <useItem refDataItem="ReportType">
+                                                            <displayItem refDataItem="ReportType"/>
+                                                        </useItem>
+                                                    </selectValue>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>VIEW_ONLY_Firm ID</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Enter The Value:</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textBox multiSelect="true" parameter="VIEW_ONLY_Firm ID"
+                                                             required="false"/>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>VIEW_ONLY_Report Month</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textItem>
+                                                        <dataSource>
+                                                            <staticValue>Enter The Value:</staticValue>
+                                                        </dataSource>
+                                                    </textItem>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <textBox multiSelect="true" parameter="VIEW_ONLY_Report Month"
+                                                             required="false"/>
+                                                </contents>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents/>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents/>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents/>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                </tableRows>
+                            </table>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="py"/>
+                            </defaultStyles>
+                        </style>
+                    </pageBody>
+                    <pageFooter>
+                        <contents>
+                            <promptButton type="cancel">
+                                <contents/>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="bp"/>
+                                    </defaultStyles>
+                                </style>
+                            </promptButton>
+                            <promptButton type="back">
+                                <contents/>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="bp"/>
+                                    </defaultStyles>
+                                </style>
+                            </promptButton>
+                            <promptButton type="next">
+                                <contents/>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="bp"/>
+                                    </defaultStyles>
+                                </style>
+                            </promptButton>
+                            <promptButton type="finish">
+                                <contents/>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="bp"/>
+                                    </defaultStyles>
+                                </style>
+                            </promptButton>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="fp"/>
+                            </defaultStyles>
+                        </style>
+                    </pageFooter>
+                    <style>
+                        <defaultStyles>
+                            <defaultStyle refStyle="pp"/>
+                        </defaultStyles>
+                    </style>
+                </page>
+            </promptPages>
+        </layout>
+    </layouts>
+    <classStyles>
+        <classStyle name="pd_1">
+            <CSS value="background-color:#009933; color:#FFFFFF;"/>
+        </classStyle>
+        <classStyle name="pd_2">
+            <CSS value="background-color:#FFFFFF; color:#009933;"/>
+        </classStyle>
+        <classStyle name="pd_3">
+            <CSS value="background-color:#FFFFFF; color:#CC9900;"/>
+        </classStyle>
+        <classStyle name="pd_4">
+            <CSS value="background-color:#FFFFFF; color:#990000;"/>
+        </classStyle>
+        <classStyle name="pd_5">
+            <CSS value="background-color:#990000; color:#FFFFFF;"/>
+        </classStyle>
+    </classStyles>
+    <XMLAttributes>
+        <XMLAttribute name="RS_CreateExtendedDataItems" output="no" value="true"/>
+        <XMLAttribute name="listSeparator" output="no" value=","/>
+        <XMLAttribute name="RS_modelModificationTime" output="no" value="2013-04-24T13:57:02.632Z"/>
+    </XMLAttributes>
+    <queries>
+        <query name="CM-0">
+            <source>
+                <model/>
+            </source>
+            <selection>
+                <dataItem aggregate="none" name="FilingID" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[FilingID]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="Firm Name" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Firm Name]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportDate" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Report Month]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportDate-1" rollupAggregate="none">
+                    <expression>to_char(add_months(to_date([REQST_MRDT Business
+                        Layer].[ReportMonth],'YYYYMM'),-1),'YYYYMM')
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportDate-2" rollupAggregate="none">
+                    <expression>to_char(add_months(to_date([REQST_MRDT Business Layer].[Report
+                        Month],'YYYYMM'),-2),'YYYYMM')
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportDate-3" rollupAggregate="none">
+                    <expression>to_char(add_months(to_date([REQST_MRDT Business Layer].[Report
+                        Month],'YYYYMM'),-3),'YYYYMM')
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="none" name="Firm ID" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Firm ID]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportType" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[ReportType]</expression>
+                </dataItem>
+                <dataItem name="I0940 | Total Assets">
+                    <expression>[REQST_MRDT Business Layer].[I0940 | Total Assets]</expression>
+                </dataItem>
+                <dataItem name="I3850 | % Of AI to Net Capital">
+                    <expression>[REQST_MRDT Business Layer].[I3850 | % Of AI to Net Capital]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="FocusFilingPeriodCd" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[FocusFilingPeriodCd]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="VIEW_ONLY_Firm ID" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[VIEW_ONLY_Firm ID]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="VIEW_ONLY_Report Month" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[VIEW_ONLY_Report Month]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="VIEW_ONLY_ReportType" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[VIEW_ONLY_ReportType]</expression>
+                </dataItem>
+            </selection>
+            <detailFilters>
+                <detailFilter>
+                    <filterExpression>[REQST_MRDT Business Layer].[I3840 | Total Aggregate Indebtedness] &gt; 0
+                    </filterExpression>
+                </detailFilter>
+                <detailFilter>
+                    <filterExpression>[REQST_MRDT Business Layer].[I3850 | % Of AI to Net Capital] &gt; 650
+                    </filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[FilingID] in ?FilingID?</filterExpression>
+                </detailFilter>
+                <detailFilter>
+                    <filterExpression>[FocusFilingPeriodCd] = 'Monthly'</filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[VIEW_ONLY_Firm ID] IN ?VIEW_ONLY_Firm ID?</filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[VIEW_ONLY_Report Month] IN ?VIEW_ONLY_Report Month?</filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[REQST_MRDT Business Layer].[ReportType] IN ?ReportType?</filterExpression>
+                </detailFilter>
+            </detailFilters>
+        </query>
+        <query name="CM-1-2-3">
+            <source>
+                <model/>
+            </source>
+            <selection>
+                <dataItem aggregate="none" name="Firm Name" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Firm Name]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="JoinMonth" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Report Month]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="ReportType" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[ReportType]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="Firm ID" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[Firm ID]</expression>
+                </dataItem>
+                <dataItem name="I3850 | % Of AI to Net Capital[-1-2-3]">
+                    <expression>[REQST_MRDT Business Layer].[I3850 | % Of AI to Net Capital]
+                    </expression>
+                </dataItem>
+                <dataItem name="I0940 | Total Assets[-1-2-3]">
+                    <expression>[REQST_MRDT Business Layer].[I0940 | Total Assets]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="FocusFilingPeriodCd" rollupAggregate="none">
+                    <expression>[REQST_MRDT Business Layer].[FocusFilingPeriodCd]</expression>
+                </dataItem>
+            </selection>
+            <detailFilters>
+                <detailFilter>
+                    <filterExpression>[REQST_MRDT Business Layer].[Most recent only]</filterExpression>
+                </detailFilter>
+                <detailFilter>
+                    <filterExpression>[FocusFilingPeriodCd] = 'Monthly'</filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[REQST_MRDT Business Layer].[ReportType] IN ?ReportType?</filterExpression>
+                </detailFilter>
+            </detailFilters>
+        </query>
+        <query name="Compare">
+            <source>
+                <joinOperation>
+                    <joinOperands>
+                        <joinOperand cardinality="1:1">
+                            <queryRef refQuery="CM-0"/>
+                        </joinOperand>
+                        <joinOperand cardinality="1:1">
+                            <queryRef refQuery="CM-1-2-3"/>
+                        </joinOperand>
+                    </joinOperands>
+                    <joinFilter>
+                        <filterExpression>[CM-0].[ReportType] = [CM-1-2-3].[ReportType] and
+                            [CM-0].[Firm ID] = [CM-1-2-3].[Firm ID]
+                        </filterExpression>
+                    </joinFilter>
+                </joinOperation>
+            </source>
+            <selection>
+                <dataItem name="FilingID">
+                    <expression>[CM-0].[FilingID]</expression>
+                </dataItem>
+                <dataItem name="Firm Name">
+                    <expression>[CM-0].[Firm Name]</expression>
+                </dataItem>
+                <dataItem aggregate="total" name="I:3850@CM(-1)">
+                    <expression>case [CM-1-2-3].[JoinMonth]
+                        when [CM-0].[ReportDate-1]
+                        then [CM-1-2-3].[I3850 | % Of AI to Net Capital[-1-2-3]]]
+                        else
+                        0
+                        end
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="total" name="I:3850@CM(-3)">
+                    <expression>case [CM-1-2-3].[JoinMonth]
+                        when [CM-0].[ReportDate-3]
+                        then [CM-1-2-3].[I3850 | % Of AI to Net Capital[-1-2-3]]]
+                        else
+                        0
+                        end
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="total" name="I:3850@CM(-2)">
+                    <expression>case [CM-1-2-3].[JoinMonth]
+                        when [CM-0].[ReportDate-2]
+                        then [CM-1-2-3].[I3850 | % Of AI to Net Capital[-1-2-3]]]
+                        else
+                        0
+                        end
+                    </expression>
+                </dataItem>
+                <dataItem aggregate="total" name="I:0940}@CM(-3)">
+                    <expression>case [CM-1-2-3].[JoinMonth]
+                        when [CM-0].[ReportDate-3]
+                        then [CM-1-2-3].[I0940 | Total Assets[-1-2-3]]]
+                        else
+                        0
+                        end
+                    </expression>
+                </dataItem>
+                <dataItem name="(({I:3850} -{I:3850@CM(-1)}) / {I:3850@CM(-1)})*100">
+                    <expression>(([I3850 | % Of AI to Net Capital] - [I:3850@CM(-1)]) / [I:3850@CM(-1)])</expression>
+                </dataItem>
+                <dataItem name="(({I:3850} -{I:3850@CM(-3)}) / {I:3850@CM(-3)})*100">
+                    <expression>(([I3850 | % Of AI to Net Capital] - [I:3850@CM(-3)]) / [I:3850@CM(-3)])</expression>
+                </dataItem>
+                <dataItem name="{I:0940} -{I:0940@CM(-3)}">
+                    <expression>([I0940 | Total Assets] - [I:0940}@CM(-3)])</expression>
+                </dataItem>
+                <dataItem name="REPORTED A ONE MONTH AI % INCREASE OF">
+                    <expression>'REPORTED A ONE MONTH AI % INCREASE OF'</expression>
+                </dataItem>
+                <dataItem name="AND/OR A 3 MONTH INCREASE IN AI % OF">
+                    <expression>'AND/OR A 3 MONTH INCREASE IN AI % OF'</expression>
+                </dataItem>
+                <dataItem name="AS ASSETS FOR 3 MONTHS INCREASED BY">
+                    <expression>'AS ASSETS FOR 3 MONTHS INCREASED BY'</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="I3850 | % Of AI to Net Capital">
+                    <expression>[CM-0].[I3850 | % Of AI to Net Capital]</expression>
+                </dataItem>
+                <dataItem aggregate="none" name="I0940 | Total Assets">
+                    <expression>[CM-0].[I0940 | Total Assets]</expression>
+                </dataItem>
+                <dataItem name="VIEW_ONLY_Firm ID">
+                    <expression>[CM-0].[VIEW_ONLY_Firm ID]</expression>
+                </dataItem>
+                <dataItem name="VIEW_ONLY_Report Month">
+                    <expression>[CM-0].[VIEW_ONLY_Report Month]</expression>
+                </dataItem>
+                <dataItem name="VIEW_ONLY_ReportType">
+                    <expression>[CM-0].[VIEW_ONLY_ReportType]</expression>
+                </dataItem>
+            </selection>
+            <detailFilters>
+                <detailFilter>
+                    <filterExpression>([I3850 | % Of AI to Net Capital] &gt; (1.25 * [I:3850@CM(-1)])) OR
+
+                        (
+                        ([I3850 | % Of AI to Net Capital] &gt; (1.1 * [I:3850@CM(-1)])) AND
+                        ([I:3850@CM(-1)] &gt; (1.1 * [I:3850@CM(-2)])) AND
+                        ([I:3850@CM(-2)] &gt; (1.1 * [I:3850@CM(-3)])) AND
+                        ([I0940 | Total Assets] &gt; (1.4 * [I:0940}@CM(-3)]))
+                        )
+                    </filterExpression>
+                </detailFilter>
+                <detailFilter use="optional">
+                    <filterExpression>[FilingID] in ?FilingID?</filterExpression>
+                </detailFilter>
+            </detailFilters>
+        </query>
+    </queries>
+    <reportName>10.2 | AI % INCREASING / ASSETS INCREASING-H</reportName>
+</report>

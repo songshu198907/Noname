@@ -1,0 +1,683 @@
+<report expressionLocale="en-us" xmlns="http://developer.cognos.com/schemas/report/12.0/">
+	<!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/4.0/" to "http://developer.cognos.com/schemas/report/12.0/" at 2015-5-28. 16:53:33-->
+	<modelPath>/content/package[@name='REQST_METADATA']/model[@name='model']</modelPath>
+	<queries>
+		<query name="Query1">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" name="Firm ID | Firm" rollupAggregate="none">
+					<expression>[REQST Business Layer].[Firm ID | Firm]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Firm Name" rollupAggregate="none">
+					<expression>[REQST Business Layer].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="I0200 | Cash">
+					<expression>[REQST Business Layer].[I0200 | Cash]</expression>
+				</dataItem>
+				<dataItem name="I0210 | Cash Seg W/Fed &amp; Oth Regs">
+					<expression>[REQST Business Layer].[I0210 | Cash Seg W/Fed &amp; Oth Regs]</expression>
+				</dataItem>
+				<dataItem name="I0250 | Rec Fr B/D-S/B-Oth">
+					<expression>[REQST Business Layer].[I0250 | Rec Fr B/D-S/B-Oth]</expression>
+				</dataItem>
+				<dataItem name="I0300 | Allow-Rec Fr B/D - Other">
+					<expression>[REQST Business Layer].[I0300 | Allow-Rec Fr B/D - Other]</expression>
+				</dataItem>
+				<dataItem name="I0310 | Allow-Rec Fr Cust-Cash &amp; Secd">
+					<expression>[REQST Business Layer].[I0310 | Allow-Rec Fr Cust-Cash &amp; Secd]</expression>
+				</dataItem>
+				<dataItem name="I0320 | Allow-Rec Fr Cust-Part Secd">
+					<expression>[REQST Business Layer].[I0320 | Allow-Rec Fr Cust-Part Secd]</expression>
+				</dataItem>
+				<dataItem name="I0355 | Allow-Rec fr NCust">
+					<expression>[REQST Business Layer].[I0355 | Allow-Rec fr NCust]</expression>
+				</dataItem>
+				<dataItem name="I0370 | B/As, C/Ds, &amp; C/Ps">
+					<expression>[REQST Business Layer].[I0370 | B/As, C/Ds, &amp; C/Ps]</expression>
+				</dataItem>
+				<dataItem name="I0380 | US &amp; Canadian Govt Oblig">
+					<expression>[REQST Business Layer].[I0380 | US &amp; Canadian Govt Oblig]</expression>
+				</dataItem>
+				<dataItem name="I0390 | State &amp; Muni Govt Oblig">
+					<expression>[REQST Business Layer].[I0390 | State &amp; Muni Govt Oblig]</expression>
+				</dataItem>
+				<dataItem name="I0400 | Corporate Oblig">
+					<expression>[REQST Business Layer].[I0400 | Corporate Oblig]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[REQST Business Layer].[Firm ID | Firm] = ?ReportID?</filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[REQST Business Layer].[ReportDate] = ?REPDT?</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+	</queries>
+	<layouts>
+		<layout>
+			<reportPages>
+				<page name="Page1">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+					</style>
+					<pageBody>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+						</style>
+						<contents>
+							<list horizontalPagination="true" name="List1" refQuery="Query1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ls"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse"/>
+								</style>
+								<listColumns>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Firm ID | Firm"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lc"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Firm ID | Firm"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lc"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0200 | Cash"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0200 | Cash"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0210 | Cash Seg W/Fed &amp; Oth Regs"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0210 | Cash Seg W/Fed &amp; Oth Regs"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0250 | Rec Fr B/D-S/B-Oth"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0250 | Rec Fr B/D-S/B-Oth"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0300 | Allow-Rec Fr B/D - Other"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0300 | Allow-Rec Fr B/D - Other"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0310 | Allow-Rec Fr Cust-Cash &amp; Secd"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0310 | Allow-Rec Fr Cust-Cash &amp; Secd"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0320 | Allow-Rec Fr Cust-Part Secd"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0320 | Allow-Rec Fr Cust-Part Secd"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0355 | Allow-Rec fr NCust"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0355 | Allow-Rec fr NCust"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0370 | B/As, C/Ds, &amp; C/Ps"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0370 | B/As, C/Ds, &amp; C/Ps"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0380 | US &amp; Canadian Govt Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0380 | US &amp; Canadian Govt Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0390 | State &amp; Muni Govt Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0390 | State &amp; Muni Govt Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="I0400 | Corporate Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="I0400 | Corporate Oblig"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+								</listColumns>
+							</list>
+						</contents>
+					</pageBody>
+					<pageHeader>
+						<contents>
+							<block>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+								<contents>
+									<textItem>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+										<dataSource>
+											<staticValue/>
+										</dataSource>
+									</textItem>
+								</contents>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ph"/>
+							</defaultStyles>
+							<CSS value="padding-bottom:10px"/>
+						</style>
+					</pageHeader>
+					<pageFooter>
+						<contents>
+							<table>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<date>
+														<style>
+															<dataFormat>
+																<dateFormat/>
+															</dataFormat>
+														</style>
+													</date>
+												</contents>
+												<style>
+													<CSS value="vertical-align:top;text-align:left;width:25%"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<pageNumber/>
+												</contents>
+												<style>
+													<CSS value="vertical-align:top;text-align:center;width:50%"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<time>
+														<style>
+															<dataFormat>
+																<timeFormat/>
+															</dataFormat>
+														</style>
+													</time>
+												</contents>
+												<style>
+													<CSS value="vertical-align:top;text-align:right;width:25%"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%"/>
+								</style>
+							</table>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pf"/>
+							</defaultStyles>
+							<CSS value="padding-top:10px"/>
+						</style>
+					</pageFooter>
+				</page>
+			</reportPages>
+			<promptPages>
+				<page name="Prompt Page1">
+					<pageHeader>
+						<contents>
+							<block>
+								<contents>
+									<textItem>
+										<dataSource>
+											<staticValue/>
+										</dataSource>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+									</textItem>
+								</contents>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="hp"/>
+							</defaultStyles>
+						</style>
+					</pageHeader>
+					<pageBody>
+						<contents>
+							<textBox parameter="ReportID"/>
+							<selectDate parameter="REPDT"/>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="py"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<pageFooter>
+						<contents>
+							<promptButton type="cancel">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="back">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="next">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="finish">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="fp"/>
+							</defaultStyles>
+						</style>
+					</pageFooter>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pp"/>
+						</defaultStyles>
+					</style>
+				</page>
+			</promptPages>
+		</layout>
+	</layouts>
+	<classStyles>
+		<classStyle name="pd_1">
+			<CSS value="background-color:#009933; color:#FFFFFF;"/>
+		</classStyle>
+		<classStyle name="pd_2">
+			<CSS value="background-color:#FFFFFF; color:#009933;"/>
+		</classStyle>
+		<classStyle name="pd_3">
+			<CSS value="background-color:#FFFFFF; color:#CC9900;"/>
+		</classStyle>
+		<classStyle name="pd_4">
+			<CSS value="background-color:#FFFFFF; color:#990000;"/>
+		</classStyle>
+		<classStyle name="pd_5">
+			<CSS value="background-color:#990000; color:#FFFFFF;"/>
+		</classStyle>
+	</classStyles>
+	<XMLAttributes>
+		<XMLAttribute name="RS_CreateExtendedDataItems" output="no" value="true"/>
+		<XMLAttribute name="listSeparator" output="no" value=","/>
+		<XMLAttribute name="RS_modelModificationTime" output="no" value="2008-09-08T21:28:28.570Z"/>
+	</XMLAttributes>
+	<reportName>Selector_test</reportName>
+</report>

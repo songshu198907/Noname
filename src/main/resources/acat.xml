@@ -1,0 +1,5000 @@
+<report expressionLocale="en-us" xmlns="http://developer.cognos.com/schemas/report/12.0/">
+	<!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/4.0/" to "http://developer.cognos.com/schemas/report/12.0/" at 2016-4-13. 11:48:40-->
+	<modelPath>/content/package[@name='REQST_ACAT_METADATA']/model[@name='model']</modelPath>
+	<layouts>
+		<layout>
+			<reportPages>
+				<page name="Firm-Letter" refQuery="Query5">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+						<CSS value="margin-top:0.25in"/>
+					</style>
+					<pageBody>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+							<CSS value="padding-left:0.4in"/>
+						</style>
+						<contents>
+							<conditionalBlocks>
+								<conditionalBlockDefault>
+									<contents>
+										<list horizontalPagination="true" name="List5" refQuery="Query5">
+											<style>
+												<CSS value="border-collapse:collapse"/>
+												<defaultStyles>
+													<defaultStyle refStyle="ls"/>
+												</defaultStyles>
+											</style>
+											<listColumns>
+												<listColumn>
+													<listColumnTitle>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="lt"/>
+															</defaultStyles>
+															<CSS value="background-color:white"/>
+														</style>
+														<contents>
+															<textItem>
+																<dataSource>
+																	<staticValue/>
+																</dataSource>
+															</textItem>
+															<table>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="tb"/>
+																	</defaultStyles>
+																	<CSS value="border-collapse:collapse;width:100%"/>
+																</style>
+																<tableRows>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('pkg_sent_crdt_dt')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_role')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('firm_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address1')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address2')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address3')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_city')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>, </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_state')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_province')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_zip')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="padding-top:5px;padding-bottom:5px"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Dear </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>,</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>The Automated Customer Account Transfer Regulatory Report for full transfers for the month of </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<dataItemValue refDataItem="DisplayEperiod"/>
+																						</dataSource>
+																						<style>
+																							<dataFormat>
+																								<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																							</dataFormat>
+																						</style>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>indicated a need to improve the processing of customer account transfers by your organization.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-justify:newspaper"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Your organization processed a total of </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('ttl_acct')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>account(s). The following exception(s) occurred:</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents/>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('xcptn_msg')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>FINRA rules on customer transfer states that the entire customer account transfer process must be completed within four (4) business days for cash, margin, IRA and qualified corporate plan accounts. </staticValue>
+																						</dataSource>
+																						<style>
+																							<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																						</style>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Based upon the above statistics, it would appear that your organization is not adhering to the provision of this rule. Please provide FINRA with a detailed written explanation of the reasons causing the noted exception(s). We would also like a detailed description of the methods undertaken to correct any deficiencies. We will expect a response within one week from the receipt of this letter.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-justify:newspaper"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>We wish to advise you that continuing to exceed FINRA criteria for ACATS compliance can result in further action being taken by FINRA. </staticValue>
+																						</dataSource>
+																						<style>
+																							<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																						</style>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>If you should have any questions regarding this matter, please give me a call at </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_phone')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Sincerely,</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents/>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;padding-top:21px;padding-bottom:21px"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_role')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Enclosure</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>if  ( ParamValue ('cc_nm') )  &lt;&gt; ' ' 
+then ('CC: ') + ParamDisplayValue('cc_nm') </reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>if  ( ParamValue ('cc_nm') )  &lt;&gt; ' ' 
+then (' ')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																</tableRows>
+															</table>
+														</contents>
+													</listColumnTitle>
+													<listColumnBody>
+														<contents/>
+														<style>
+															<CSS value="border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;display:none"/>
+														</style>
+													</listColumnBody>
+												</listColumn>
+											</listColumns>
+											<listColumnTitleStyle>
+												<style>
+													<CSS value="border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none"/>
+												</style>
+											</listColumnTitleStyle>
+										</list>
+									</contents>
+									<conditionalStyles>
+										<conditionalStyleCases refVariable="firm-file variable">
+											<conditionalStyle refVariableValue="firm"/>
+										</conditionalStyleCases>
+										<conditionalStyleDefault/>
+									</conditionalStyles>
+								</conditionalBlockDefault>
+								<conditionalBlockCases refVariable="firm-file variable">
+									<conditionalBlock refVariableValue="file">
+										<contents/>
+									</conditionalBlock>
+								</conditionalBlockCases>
+							</conditionalBlocks>
+						</contents>
+					</pageBody>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="firm"/>
+					</conditionalRender>
+					<pageSetup>
+						<namedPaper name="/configuration/pageDefinition[@name='Letter']"/>
+					</pageSetup>
+					<pageHeader>
+						<contents>
+							<image>
+								<dataSource>
+									<staticValue>../samples/images/Finra Logo_small.jpg </staticValue>
+								</dataSource>
+								<style>
+									<CSS value="width:2.75in;height:0.75in"/>
+								</style>
+							</image>
+						</contents>
+						<style>
+							<CSS value="padding-top:0px"/>
+						</style>
+					</pageHeader>
+				</page>
+				<page name="Firm-Report1" refQuery="final Query">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+					</style>
+					<pageBody>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+						</style>
+						<contents>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%;margin-bottom:20px"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS Control Numbers</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Exception Period: </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="display date"/>
+														</dataSource>
+														<style>
+															<dataFormat>
+																<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+															</dataFormat>
+														</style>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Date Run: </staticValue>
+														</dataSource>
+													</textItem>
+													<date>
+														<style>
+															<dataFormat>
+																<dateFormat/>
+															</dataFormat>
+														</style>
+													</date>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS Full Exceptions</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Run By: </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="Run By"/>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS accounts transfers by </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="Firm Name"/>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<staticValue>for </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="display date"/>
+														</dataSource>
+														<style>
+															<dataFormat>
+																<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+															</dataFormat>
+														</style>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;padding-top:5px;padding-bottom:5px"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+							<list horizontalPagination="true" name="List1" refQuery="final Query">
+								<listColumnBodyStyle>
+									<style>
+										<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;border:1pt solid #003366"/>
+									</style>
+								</listColumnBodyStyle>
+								<listColumnTitleStyle>
+									<style>
+										<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;text-align:left;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+									</style>
+								</listColumnTitleStyle>
+								<style>
+									<CSS value="border-collapse:collapse;width:100%;border:2.25pt solid #003366"/>
+									<defaultStyles>
+										<defaultStyle refStyle="ls"/>
+									</defaultStyles>
+								</style>
+								<listColumns>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Firm Name"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="display date"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="display date"/>
+													</dataSource>
+													<style>
+														<dataFormat>
+															<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+														</dataFormat>
+													</style>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="display date"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Exception Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Exception Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Exception Name"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Accounts"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Accounts"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Accounts"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="CNTRL_NB"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="CNTRL_NB"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+								</listColumns>
+								<listGroups>
+									<listGroup refDataItem="Exception Period"/>
+									<listGroup refDataItem="Firm Name"/>
+									<listGroup refDataItem="display date"/>
+									<listGroup refDataItem="Exception Name"/>
+									<listGroup refDataItem="Accounts"/>
+								</listGroups>
+							</list>
+						</contents>
+					</pageBody>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="firm"/>
+					</conditionalRender>
+					<pageSetup orientation="landscape"/>
+				</page>
+				<page name="File-Letter" refQuery="Query5">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+						<CSS value="margin-top:0.25in"/>
+					</style>
+					<pageBody>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+							<CSS value="padding-left:0.4in"/>
+						</style>
+						<contents>
+							<conditionalBlocks>
+								<conditionalBlockDefault>
+									<contents>
+										<list horizontalPagination="true" name="List51" refQuery="Query5">
+											<style>
+												<CSS value="border-collapse:collapse"/>
+												<defaultStyles>
+													<defaultStyle refStyle="ls"/>
+												</defaultStyles>
+											</style>
+											<listColumns>
+												<listColumn>
+													<listColumnTitle>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="lt"/>
+															</defaultStyles>
+															<CSS value="background-color:white"/>
+														</style>
+														<contents>
+															<textItem>
+																<dataSource>
+																	<staticValue/>
+																</dataSource>
+															</textItem>
+															<table>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="tb"/>
+																	</defaultStyles>
+																	<CSS value="border-collapse:collapse;width:100%"/>
+																</style>
+																<tableRows>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('pkg_sent_crdt_dt')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_role')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('firm_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address1')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address2')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_address3')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_city')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>,</staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_state')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_province')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_zip')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="padding-top:5px;padding-bottom:5px"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Dear </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('mbr_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>,</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>The Automated Customer Account Transfer Regulatory Report for full transfers for the month of </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<dataItemValue refDataItem="DisplayEperiod"/>
+																						</dataSource>
+																						<style>
+																							<dataFormat>
+																								<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																							</dataFormat>
+																						</style>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>indicated a need to improve the processing of customer account transfers by your organization.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-justify:newspaper"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Your organization processed a total of </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('ttl_acct')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>account(s). The following exception(s) occurred:</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents/>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('xcptn_msg')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>FINRA rules on customer transfer states that the entire customer account transfer process must be completed within four (4) business days for cash, margin, IRA and qualified corporate plan accounts. </staticValue>
+																						</dataSource>
+																						<style>
+																							<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																						</style>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Based upon the above statistics, it would appear that your organization is not adhering to the provision of this rule. Please provide FINRA with a detailed written explanation of the reasons causing the noted exception(s). We would also like a detailed description of the methods undertaken to correct any deficiencies. We will expect a response within one week from the receipt of this letter.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-justify:newspaper"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>We wish to advise you that continuing to exceed FINRA criteria for ACATS compliance can result in further action being taken by FINRA. </staticValue>
+																						</dataSource>
+																						<style>
+																							<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																						</style>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>If you should have any questions regarding this matter, please give me a call at </staticValue>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_phone')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>.</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Sincerely,</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents/>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;padding-top:21px;padding-bottom:21px"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_full_nm')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>ParamDisplayValue('nlyst_role')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue>Enclosure</staticValue>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<staticValue/>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>if  ( ParamValue ('cc_nm') )  &lt;&gt; ' ' 
+then ('CC: ') + ParamDisplayValue('cc_nm') </reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																	<tableRow>
+																		<tableCells>
+																			<tableCell>
+																				<contents>
+																					<textItem>
+																						<dataSource>
+																							<reportExpression>if  ( ParamValue ('cc_nm') )  &lt;&gt; ' ' 
+then (' ')</reportExpression>
+																						</dataSource>
+																					</textItem>
+																				</contents>
+																				<style>
+																					<CSS value="font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal"/>
+																				</style>
+																			</tableCell>
+																		</tableCells>
+																	</tableRow>
+																</tableRows>
+															</table>
+														</contents>
+													</listColumnTitle>
+													<listColumnBody>
+														<contents/>
+														<style>
+															<CSS value="border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;display:none"/>
+														</style>
+													</listColumnBody>
+												</listColumn>
+											</listColumns>
+											<listColumnTitleStyle>
+												<style>
+													<CSS value="border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none"/>
+												</style>
+											</listColumnTitleStyle>
+										</list>
+									</contents>
+									<conditionalStyles>
+										<conditionalStyleCases refVariable="firm-file variable">
+											<conditionalStyle refVariableValue="file"/>
+										</conditionalStyleCases>
+										<conditionalStyleDefault/>
+									</conditionalStyles>
+								</conditionalBlockDefault>
+								<conditionalBlockCases refVariable="firm-file variable">
+									<conditionalBlock refVariableValue="firm">
+										<contents/>
+									</conditionalBlock>
+								</conditionalBlockCases>
+							</conditionalBlocks>
+						</contents>
+					</pageBody>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="file"/>
+					</conditionalRender>
+					<pageSetup>
+						<namedPaper name="/configuration/pageDefinition[@name='Letter']"/>
+					</pageSetup>
+					<pageHeader>
+						<contents>
+							<image>
+								<dataSource>
+									<staticValue>http://pln-rpt-appq2.pln.nasd.com:9090/reqstImages/Finra Logo_small.jpg </staticValue>
+								</dataSource>
+								<style>
+									<CSS value="width:2.75in;height:0.75in"/>
+								</style>
+							</image>
+						</contents>
+						<style>
+							<CSS value="padding-top:0px"/>
+						</style>
+					</pageHeader>
+				</page>
+				<page name="File-Report1" refQuery="final Query">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+					</style>
+					<pageBody>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+						</style>
+						<contents>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%;margin-bottom:20px"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS Control Numbers</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Exception Period: </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="display date"/>
+														</dataSource>
+														<style>
+															<dataFormat>
+																<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+															</dataFormat>
+														</style>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Date Run: </staticValue>
+														</dataSource>
+													</textItem>
+													<date>
+														<style>
+															<dataFormat>
+																<dateFormat/>
+															</dataFormat>
+														</style>
+													</date>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS Full Exceptions</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Run By: </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="Run By"/>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Verdana;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ACATS accounts transfers by </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="Firm Name"/>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<staticValue>for </staticValue>
+														</dataSource>
+													</textItem>
+													<textItem>
+														<dataSource>
+															<dataItemValue refDataItem="display date"/>
+														</dataSource>
+														<style>
+															<dataFormat>
+																<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+															</dataFormat>
+														</style>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;padding-top:5px;padding-bottom:5px"/>
+												</style>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+							<list horizontalPagination="true" name="List11" refQuery="final Query">
+								<listColumnBodyStyle>
+									<style>
+										<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;border:1pt solid #003366"/>
+									</style>
+								</listColumnBodyStyle>
+								<listColumnTitleStyle>
+									<style>
+										<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;text-align:left;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+									</style>
+								</listColumnTitleStyle>
+								<style>
+									<CSS value="border-collapse:collapse;width:100%;border:2.25pt solid #003366"/>
+									<defaultStyles>
+										<defaultStyle refStyle="ls"/>
+									</defaultStyles>
+								</style>
+								<listColumns>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Firm Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Firm Name"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="display date"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="display date"/>
+													</dataSource>
+													<style>
+														<dataFormat>
+															<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+														</dataFormat>
+													</style>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="display date"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Exception Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Exception Name"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Exception Name"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="Accounts"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="Accounts"/>
+													</dataSource>
+												</textItem>
+											</contents>
+											<listColumnRowSpan refDataItem="Accounts"/>
+										</listColumnBody>
+									</listColumn>
+									<listColumn>
+										<listColumnTitle>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lt"/>
+												</defaultStyles>
+												<CSS value="width:20%"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemLabel refDataItem="CNTRL_NB"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnTitle>
+										<listColumnBody>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="lm"/>
+												</defaultStyles>
+												<CSS value="text-align:left;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none"/>
+											</style>
+											<contents>
+												<textItem>
+													<dataSource>
+														<dataItemValue refDataItem="CNTRL_NB"/>
+													</dataSource>
+												</textItem>
+											</contents>
+										</listColumnBody>
+									</listColumn>
+								</listColumns>
+								<listGroups>
+									<listGroup refDataItem="Firm Name"/>
+									<listGroup refDataItem="Exception Period"/>
+									<listGroup refDataItem="Exception Name"/>
+									<listGroup refDataItem="Accounts"/>
+									<listGroup refDataItem="display date"/>
+								</listGroups>
+							</list>
+						</contents>
+					</pageBody>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="file"/>
+					</conditionalRender>
+					<pageSetup orientation="landscape"/>
+				</page>
+				<page name="File-Report2" refQuery="Query2">
+					<pageBody>
+						<contents>
+							<conditionalBlocks>
+								<conditionalBlockDefault>
+									<contents>
+										<block>
+											<contents>
+												<table>
+													<style>
+														<defaultStyles>
+															<defaultStyle refStyle="tb"/>
+														</defaultStyles>
+														<CSS value="border-collapse:collapse;width:100%;margin-top:20px;margin-bottom:5px"/>
+													</style>
+													<tableRows>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>ACATS Firm History</staticValue>
+																			</dataSource>
+																			<style>
+																				<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																			</style>
+																		</textItem>
+																	</contents>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Exception Period: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<dataItemValue refDataItem="Display FROM_DATE"/>
+																			</dataSource>
+																			<style>
+																				<dataFormat>
+																					<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																				</dataFormat>
+																			</style>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>- </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<dataItemValue refDataItem="Display TO_DATE"/>
+																			</dataSource>
+																			<style>
+																				<dataFormat>
+																					<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																				</dataFormat>
+																			</style>
+																		</textItem>
+																	</contents>
+																	<style>
+																		<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																	</style>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Date Run: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<date>
+																			<style>
+																				<dataFormat>
+																					<dateFormat/>
+																				</dataFormat>
+																			</style>
+																		</date>
+																	</contents>
+																	<style>
+																		<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																	</style>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>ACATS Full Exceptions</staticValue>
+																			</dataSource>
+																		</textItem>
+																	</contents>
+																	<style>
+																		<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																	</style>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Run By: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<dataItemValue refDataItem="Run By"/>
+																			</dataSource>
+																		</textItem>
+																	</contents>
+																	<style>
+																		<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																	</style>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+													</tableRows>
+												</table>
+												<list horizontalPagination="true" name="List211" refQuery="Query2">
+													<style>
+														<CSS value="border-collapse:collapse;width:100%;margin-top:20px;margin-bottom:20px;border:2.25pt solid #003366"/>
+														<defaultStyles>
+															<defaultStyle refStyle="ls"/>
+														</defaultStyles>
+													</style>
+													<listColumns>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Firm Name"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Firm Name"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Exception Message"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Exception Message"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;width:8%;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Exception Period"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Exception Period"/>
+																		</dataSource>
+																		<style>
+																			<dataFormat>
+																				<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																			</dataFormat>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Total Accounts"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Total Accounts"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Validated Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Validated Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Delivered Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Delivered Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Non-Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Non-Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:6%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Memo Only Purged"/>
+																		</dataSource>
+																		<style>
+																			<CSS value="width:8%"/>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Memo Only Purged"/>
+																		</dataSource>
+																		<style>
+																			<dataFormat>
+																				<dateFormat displayOrder="MDY" showDays="true" showMonths="shortName" showYears="true"/>
+																			</dataFormat>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Date Package Sent"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Date Package Sent"/>
+																		</dataSource>
+																		<style>
+																			<dataFormat>
+																				<dateFormat displayOrder="MDY" showDays="true" showMonths="shortName" showYears="true"/>
+																			</dataFormat>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Date Response Received"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Date Response Received"/>
+																		</dataSource>
+																		<style>
+																			<dataFormat>
+																				<dateFormat displayOrder="MDY" showDays="true" showMonths="shortName" showYears="true"/>
+																			</dataFormat>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Last Step Completed(Date)"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<table>
+																		<style>
+																			<defaultStyles>
+																				<defaultStyle refStyle="tb"/>
+																			</defaultStyles>
+																			<CSS value="border-collapse:collapse;background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal"/>
+																		</style>
+																		<tableRows>
+																			<tableRow>
+																				<tableCells>
+																					<tableCell>
+																						<contents>
+																							<textItem>
+																								<dataSource>
+																									<dataItemValue refDataItem="Last Step Completed(Date)"/>
+																								</dataSource>
+																							</textItem>
+																						</contents>
+																					</tableCell>
+																				</tableCells>
+																			</tableRow>
+																			<tableRow>
+																				<tableCells>
+																					<tableCell>
+																						<contents>
+																							<textItem>
+																								<dataSource>
+																									<staticValue>(</staticValue>
+																								</dataSource>
+																							</textItem>
+																							<textItem>
+																								<dataSource>
+																									<dataItemValue refDataItem="LSCDT"/>
+																								</dataSource>
+																								<style>
+																									<dataFormat>
+																										<dateFormat displayOrder="MDY" showDays="true" showMonths="shortName" showYears="true"/>
+																									</dataFormat>
+																								</style>
+																							</textItem>
+																							<textItem>
+																								<dataSource>
+																									<staticValue>)</staticValue>
+																								</dataSource>
+																							</textItem>
+																						</contents>
+																					</tableCell>
+																				</tableCells>
+																			</tableRow>
+																		</tableRows>
+																	</table>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366;background-color:#DFDFDF;width:8%;border-bottom:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Status"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;color:#003366;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Status"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+													</listColumns>
+													<listColumnBodyStyle>
+														<style>
+															<CSS value="white-space:normal;word-wrap:break-word;word-break:normal;text-align:left"/>
+														</style>
+													</listColumnBodyStyle>
+													<listColumnTitleStyle>
+														<style>
+															<CSS value="text-align:left"/>
+														</style>
+													</listColumnTitleStyle>
+													<listOverallGroup>
+														<listFooter>
+															<listRows>
+																<listRow>
+																	<rowCells>
+																		<rowCell colSpan="3">
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<staticValue>Summary</staticValue>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="of"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Total Accounts)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Validated Late)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Delivered Late)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Validated Purged)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Non-Validated Purged)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<dataItemValue refDataItem="Total(Memo Only Purged)"/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;text-align:left;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<staticValue/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents>
+																				<textItem>
+																					<dataSource>
+																						<staticValue/>
+																					</dataSource>
+																				</textItem>
+																			</contents>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents/>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																		<rowCell>
+																			<contents/>
+																			<style>
+																				<defaultStyles>
+																					<defaultStyle refStyle="os"/>
+																				</defaultStyles>
+																				<CSS value="background-color:white;font-family:Arial;font-size:9pt;font-weight:bold;font-style:italic;color:#003366;border:1pt solid #003366"/>
+																			</style>
+																		</rowCell>
+																	</rowCells>
+																</listRow>
+															</listRows>
+														</listFooter>
+													</listOverallGroup>
+												</list>
+											</contents>
+											<style>
+												<CSS value="margin-top:5%"/>
+											</style>
+										</block>
+									</contents>
+									<conditionalStyles>
+										<conditionalStyleCases refVariable="firm-file variable">
+											<conditionalStyle refVariableValue="file"/>
+										</conditionalStyleCases>
+										<conditionalStyleDefault/>
+									</conditionalStyles>
+								</conditionalBlockDefault>
+								<conditionalBlockCases refVariable="firm-file variable">
+									<conditionalBlock refVariableValue="firm">
+										<contents/>
+									</conditionalBlock>
+								</conditionalBlockCases>
+							</conditionalBlocks>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+					</style>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="file"/>
+					</conditionalRender>
+					<pageSetup orientation="landscape">
+						<namedPaper name="/configuration/pageDefinition[@name='Letter']"/>
+					</pageSetup>
+				</page>
+				<page name="File-Report3" refQuery="Query4">
+					<pageBody>
+						<contents>
+							<conditionalBlocks>
+								<conditionalBlockDefault>
+									<contents>
+										<block>
+											<contents>
+												<table>
+													<style>
+														<defaultStyles>
+															<defaultStyle refStyle="tb"/>
+														</defaultStyles>
+														<CSS value="border-collapse:collapse;width:100%;margin-top:20px;margin-bottom:5px"/>
+													</style>
+													<tableRows>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>ACATS Exception List</staticValue>
+																			</dataSource>
+																			<style>
+																				<CSS value="font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;color:#003366"/>
+																			</style>
+																		</textItem>
+																	</contents>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Exception Period: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<dataItemValue refDataItem="DisplayEperiod"/>
+																			</dataSource>
+																			<style>
+																				<dataFormat>
+																					<dateFormat displayOrder="MDY" showDays="false" showMonths="shortName" showYears="true"/>
+																				</dataFormat>
+																			</style>
+																		</textItem>
+																	</contents>
+																	<style>
+																		<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal"/>
+																	</style>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Date Run: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<date>
+																			<style>
+																				<dataFormat>
+																					<dateFormat/>
+																				</dataFormat>
+																			</style>
+																		</date>
+																	</contents>
+																	<style>
+																		<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal"/>
+																	</style>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents/>
+																	<style>
+																		<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal"/>
+																	</style>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>ACATS  Full Exceptions</staticValue>
+																			</dataSource>
+																			<style>
+																				<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal"/>
+																			</style>
+																		</textItem>
+																	</contents>
+																</tableCell>
+																<tableCell>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>Run By: </staticValue>
+																			</dataSource>
+																		</textItem>
+																		<textItem>
+																			<dataSource>
+																				<dataItemValue refDataItem="Run By"/>
+																			</dataSource>
+																		</textItem>
+																	</contents>
+																	<style>
+																		<CSS value="background-color:white;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal"/>
+																	</style>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+														<tableRow>
+															<tableCells>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+																<tableCell>
+																	<contents/>
+																</tableCell>
+															</tableCells>
+														</tableRow>
+													</tableRows>
+												</table>
+												<list horizontalPagination="true" name="List412" refQuery="Query4">
+													<style>
+														<CSS value="border-collapse:collapse;margin-top:20px;margin-bottom:20px;border:2.25pt solid #003366"/>
+														<defaultStyles>
+															<defaultStyle refStyle="ls"/>
+														</defaultStyles>
+													</style>
+													<listColumns>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Firm Name"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Firm Name"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Exception Message"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Exception Message"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Total Accounts"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Total Accounts"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Validated Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Validated Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Delivered Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Delivered Late"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Non-Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Non-Validated Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Memo Only Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lm"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;text-align:left;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Memo Only Purged"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366;border-right:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Date Package Sent"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Date Package Sent"/>
+																		</dataSource>
+																		<style>
+																			<dataFormat>
+																				<dateFormat displayOrder="MDY" showDays="true" showMonths="shortName" showYears="true"/>
+																			</dataFormat>
+																		</style>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+														<listColumn>
+															<listColumnTitle>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lt"/>
+																	</defaultStyles>
+																	<CSS value="background-color:#DFDFDF;color:#003366;font-family:Arial;font-size:9pt;font-weight:bold;font-style:normal;border-bottom:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemLabel refDataItem="Status"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnTitle>
+															<listColumnBody>
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lc"/>
+																	</defaultStyles>
+																	<CSS value="color:#003366;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;background-color:white;border:1pt solid #003366"/>
+																</style>
+																<contents>
+																	<textItem>
+																		<dataSource>
+																			<dataItemValue refDataItem="Status"/>
+																		</dataSource>
+																	</textItem>
+																</contents>
+															</listColumnBody>
+														</listColumn>
+													</listColumns>
+													<listColumnBodyStyle>
+														<style>
+															<CSS value="text-align:left"/>
+														</style>
+													</listColumnBodyStyle>
+													<listColumnTitleStyle>
+														<style>
+															<CSS value="text-align:left"/>
+														</style>
+													</listColumnTitleStyle>
+												</list>
+											</contents>
+											<style>
+												<CSS value="margin-top:5%"/>
+											</style>
+										</block>
+									</contents>
+									<conditionalStyles>
+										<conditionalStyleCases refVariable="firm-file variable">
+											<conditionalStyle refVariableValue="file"/>
+										</conditionalStyleCases>
+										<conditionalStyleDefault/>
+									</conditionalStyles>
+								</conditionalBlockDefault>
+								<conditionalBlockCases refVariable="firm-file variable">
+									<conditionalBlock refVariableValue="firm">
+										<contents/>
+									</conditionalBlock>
+								</conditionalBlockCases>
+							</conditionalBlocks>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="pb"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+					</style>
+					<conditionalRender refVariable="firm-file variable">
+						<renderFor refVariableValue="file"/>
+					</conditionalRender>
+					<pageSetup orientation="landscape">
+						<namedPaper name="/configuration/pageDefinition[@name='Letter']"/>
+					</pageSetup>
+				</page>
+			</reportPages>
+			<pageSetup orientation="landscape"/>
+			<promptPages>
+				<page name="Prompt Page1">
+					<pageHeader>
+						<contents>
+							<block>
+								<contents>
+									<textItem>
+										<dataSource>
+											<staticValue>PACKAGE SELECTION</staticValue>
+										</dataSource>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+									</textItem>
+								</contents>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="hp"/>
+							</defaultStyles>
+						</style>
+					</pageHeader>
+					<pageBody>
+						<contents>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>Optional Reports</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="width:30%"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<selectValue parameter="pkg_type">
+														<selectOptions>
+															<selectOption useValue="1">
+																<displayValue>firm</displayValue>
+															</selectOption>
+															<selectOption useValue="2">
+																<displayValue>file</displayValue>
+															</selectOption>
+														</selectOptions>
+													</selectValue>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="py"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<pageFooter>
+						<contents>
+							<promptButton type="cancel">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="next">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="fp"/>
+							</defaultStyles>
+						</style>
+					</pageFooter>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pp"/>
+						</defaultStyles>
+					</style>
+				</page>
+				<page name="Prompt Page2">
+					<pageHeader>
+						<contents>
+							<block>
+								<contents>
+									<textItem>
+										<dataSource>
+											<staticValue>Letter Parameters</staticValue>
+										</dataSource>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+									</textItem>
+								</contents>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="hp"/>
+							</defaultStyles>
+						</style>
+					</pageHeader>
+					<pageBody>
+						<contents>
+							<table>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tb"/>
+									</defaultStyles>
+									<CSS value="border-collapse:collapse;width:100%"/>
+								</style>
+								<tableRows>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>DATE LETTER GENERATED FOR THE FIRST TIME</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+												<style>
+													<CSS value="width:40%"/>
+												</style>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="pkg_sent_crdt_dt" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>FIRM NAME</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="firm_nm" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>MEMBER FIRM CONTACT NAME</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_full_nm" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>MEMBER FIRM CONTACT ROLE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_role" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ADDRESS1</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_address1" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ADDRESS2</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_address2" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ADDRESS3</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_address3" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>CITY</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_city" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>STATE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_state" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>PROVINCE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_province" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ZIP</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_zip" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>COUNTRY</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="mbr_country" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>CC NAME:</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="cc_nm" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>TOTAL ACCOUNTS</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="ttl_acct" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>EXCEPTION MESSAGE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="xcptn_msg" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ANALYST FULL NAME</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="nlyst_full_nm" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ANALYST PHONE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="nlyst_phone" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents>
+													<textItem>
+														<dataSource>
+															<staticValue>ANALYST ROLE</staticValue>
+														</dataSource>
+													</textItem>
+												</contents>
+											</tableCell>
+											<tableCell>
+												<contents>
+													<textBox parameter="nlyst_role" required="false"/>
+												</contents>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+									<tableRow>
+										<tableCells>
+											<tableCell>
+												<contents/>
+											</tableCell>
+											<tableCell>
+												<contents/>
+											</tableCell>
+										</tableCells>
+									</tableRow>
+								</tableRows>
+							</table>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="py"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<pageFooter>
+						<contents>
+							<promptButton type="back">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="next">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="fp"/>
+							</defaultStyles>
+						</style>
+					</pageFooter>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pp"/>
+						</defaultStyles>
+					</style>
+				</page>
+			</promptPages>
+		</layout>
+	</layouts>
+	<classStyles>
+		<classStyle name="pd_1">
+			<CSS value="background-color:#009933; color:#FFFFFF;"/>
+		</classStyle>
+		<classStyle name="pd_2">
+			<CSS value="background-color:#FFFFFF; color:#009933;"/>
+		</classStyle>
+		<classStyle name="pd_3">
+			<CSS value="background-color:#FFFFFF; color:#CC9900;"/>
+		</classStyle>
+		<classStyle name="pd_4">
+			<CSS value="background-color:#FFFFFF; color:#990000;"/>
+		</classStyle>
+		<classStyle name="pd_5">
+			<CSS value="background-color:#990000; color:#FFFFFF;"/>
+		</classStyle>
+	</classStyles>
+	<XMLAttributes>
+		<XMLAttribute name="RS_CreateExtendedDataItems" output="no" value="true"/>
+		<XMLAttribute name="listSeparator" output="no" value=","/>
+		<XMLAttribute name="RS_modelModificationTime" output="no" value="2010-05-25T18:33:45.731Z"/>
+	</XMLAttributes>
+	<queries>
+		<query name="Query2">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" label="Firm" name="Firm Name" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[FIRM_NM]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="CRD ID" name="CRD ID">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Exception Message" name="Exception Message" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_MSG_TX]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Exception Period1" name="Exception Period1" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Exception Period" name="Exception Period" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Total Accounts" name="Total Accounts">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_ACCTS_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Validated Late" name="Validated Late">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Delivered Late" name="Delivered Late">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_DLVRD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Validated Purged" name="Validated Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Non-Validated Purged" name="Non-Validated Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_NON_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Memo Only Purged" name="Memo Only Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_MEMO_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Date Package Sent" name="Date Package Sent" rollupAggregate="total">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[PKG_SENT_CRTD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Date Response Received" name="Date Response Received" rollupAggregate="total">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[RSPNS_RCVD_CRTD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Last Step Completed(Date)" name="Last Step Completed(Date)" rollupAggregate="total">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[LAST_STTS_TX]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Status" name="Status" rollupAggregate="total">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TASK_LFCYC_STTS_TX]</expression>
+				</dataItem>
+				<dataItem label="LSCDT" name="LSCDT">
+					<expression>to_char([REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[LAST_STTS_CRTD_DT],'MonthDD,YYYY')</expression>
+				</dataItem>
+				<dataItem label="Run By" name="Run By">
+					<expression>?run_by?</expression>
+				</dataItem>
+				<dataItem label="Display FROM_DATE" name="Display FROM_DATE">
+					<expression>to_date(
+to_char( ?from_year?) + '-' + to_char(?from_month?)
+, 'YYYY-MM')</expression>
+				</dataItem>
+				<dataItem label="Display TO_DATE" name="Display TO_DATE">
+					<expression>to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Total Accounts)" rollupAggregate="total">
+					<expression>[Total Accounts]</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Validated Late)" rollupAggregate="total">
+					<expression>[Validated Late]</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Delivered Late)" rollupAggregate="total">
+					<expression>[Delivered Late]</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Validated Purged)" rollupAggregate="total">
+					<expression>[Validated Purged]</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Non-Validated Purged)" rollupAggregate="total">
+					<expression>[Non-Validated Purged]</expression>
+				</dataItem>
+				<dataItem aggregate="calculated" name="Total(Memo Only Purged)" rollupAggregate="total">
+					<expression>[Memo Only Purged]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID] = ?crd_id?</filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]
+
+between
+
+to_date(
+to_char( ?from_year?) + '-' + to_char(?from_month?)
+, 'YYYY-MM') 
+
+AND 
+
+
+to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Query4">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" label="CRD ID " name="CRD ID">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Firm" name="Firm Name" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[FIRM_NM]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Exception Message" name="Exception Message" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_MSG_TX]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Exception Period" name="Exception Period" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Total Accounts" name="Total Accounts">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_ACCTS_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Validated Late" name="Validated Late">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Delivered Late" name="Delivered Late">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_DLVRD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Validated Purged" name="Validated Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Non-Validated Purged" name="Non-Validated Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_NON_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Memo Only Purged" name="Memo Only Purged">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_MEMO_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Date Package Sent" name="Date Package Sent" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[PKG_SENT_CRTD_DT]</expression>
+				</dataItem>
+				<dataItem label="DisplayEperiod" name="DisplayEperiod">
+					<expression>to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="Status" name="Status" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TASK_LFCYC_STTS_TX]</expression>
+				</dataItem>
+				<dataItem label="Run By" name="Run By">
+					<expression>?run_by?</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID]=?crd_id?</filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]
+=
+to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM') 
+</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Query5">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" name="Firm" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[FIRM_NM]</expression>
+				</dataItem>
+				<dataItem aggregate="none" label="CRD ID" name="CRD ID">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID]</expression>
+				</dataItem>
+				<dataItem label="DisplayEperiod" name="DisplayEperiod">
+					<expression>to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[CRD ID] = ?crd_id?</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="ACAT">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" label="Firm" name="Firm Name" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS FULL MSM].[Firm Name]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="CRD Number" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS FULL MSM].[CRD Number]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="VALUE_CD" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FULL_MSM_CNTRL].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="CNTRL_NB" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FULL_MSM_CNTRL].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Exception Year" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS FULL MSM].[Exception Year]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Exception Month" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS FULL MSM].[Exception Month]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[CRD Number] = ?crd_id?</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="MRDT">
+			<source>
+				<model/>
+			</source>
+			<selection>
+				<dataItem aggregate="none" label="Firm" name="FIRM_NM" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[FIRM_NM]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="CRD_ID">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[CRD_ID]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Exception Period" rollupAggregate="none">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="TTL_DLVRD_LATE_NB">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_DLVRD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="TTL_VLDTD_LATE_NB">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="TTL_VLDTD_PRGD_NB">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="TTL_NON_VLDTD_PRGD_NB">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_NON_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="TTL_MEMO_PRGD_NB">
+					<expression>[REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[TTL_MEMO_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Exception Year" rollupAggregate="none">
+					<expression>to_number(to_char([REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT],'YYYY'))</expression>
+				</dataItem>
+				<dataItem aggregate="none" name="Exception Month" rollupAggregate="none">
+					<expression>to_number(to_char([REQST_ACATS Business Layer].[ACATS_FIRM_FULL_HS_VW].[XCPTN_PRD_DT],'MM'))</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>[Exception Period] = to_date(
+to_char( ?to_year?) + '-' + to_char(?to_month?)
+, 'YYYY-MM')
+</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Delivered Late">
+			<source>
+				<joinOperation>
+					<joinOperands>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="ACAT"/>
+						</joinOperand>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="MRDT"/>
+						</joinOperand>
+					</joinOperands>
+					<joinFilter>
+						<filterExpression>[ACAT].[CRD Number] = [MRDT].[CRD_ID] and
+[ACAT].[Exception Year] = [MRDT].[Exception Year] and
+[ACAT].[Exception Month] = [MRDT].[Exception Month]</filterExpression>
+					</joinFilter>
+				</joinOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[ACAT].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[ACAT].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[MRDT].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>'Delivered Late'</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[ACAT].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[ACAT].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[MRDT].[TTL_DLVRD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>'DL'</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[MRDT].[display date]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>?xcptn_ctg? contains [Exception_category]</filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[VALUE_CD] = 'TTL_DLVR_LATE_CT'</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="validated Late">
+			<source>
+				<joinOperation>
+					<joinOperands>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="ACAT"/>
+						</joinOperand>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="MRDT"/>
+						</joinOperand>
+					</joinOperands>
+					<joinFilter>
+						<filterExpression>[ACAT].[CRD Number] = [MRDT].[CRD_ID] and
+[ACAT].[Exception Year] = [MRDT].[Exception Year] and
+[ACAT].[Exception Month] = [MRDT].[Exception Month]</filterExpression>
+					</joinFilter>
+				</joinOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[ACAT].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[ACAT].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[MRDT].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>'validated Late'</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[ACAT].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[ACAT].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[MRDT].[TTL_VLDTD_LATE_NB]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>'VL'</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[MRDT].[display date]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>?xcptn_ctg? contains [Exception_category] </filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[VALUE_CD] = 'TTL_VLDT_LATE_CT'</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Validated Accounts Purged">
+			<source>
+				<joinOperation>
+					<joinOperands>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="ACAT"/>
+						</joinOperand>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="MRDT"/>
+						</joinOperand>
+					</joinOperands>
+					<joinFilter>
+						<filterExpression>[ACAT].[CRD Number] = [MRDT].[CRD_ID] and
+[ACAT].[Exception Year] = [MRDT].[Exception Year] and
+[ACAT].[Exception Month] = [MRDT].[Exception Month]</filterExpression>
+					</joinFilter>
+				</joinOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[ACAT].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[ACAT].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[MRDT].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>'Validated Accounts purged'</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[ACAT].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[ACAT].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[MRDT].[TTL_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>'VP'</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[MRDT].[display date]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>?xcptn_ctg? contains [Exception_category] </filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[VALUE_CD] = 'PRGD_VLDT_ACCNT_CT'</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Non_Validated Accts Purged">
+			<source>
+				<joinOperation>
+					<joinOperands>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="ACAT"/>
+						</joinOperand>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="MRDT"/>
+						</joinOperand>
+					</joinOperands>
+					<joinFilter>
+						<filterExpression>[ACAT].[CRD Number] = [MRDT].[CRD_ID] and
+[ACAT].[Exception Year] = [MRDT].[Exception Year] and
+[ACAT].[Exception Month] = [MRDT].[Exception Month]</filterExpression>
+					</joinFilter>
+				</joinOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[ACAT].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[ACAT].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[MRDT].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>'Non-Validated Accounts Purged'</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[ACAT].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[ACAT].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[MRDT].[TTL_NON_VLDTD_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>'NP'</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[MRDT].[display date]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>?xcptn_ctg? contains [Exception_category] </filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[VALUE_CD] = 'PRGD_NON_VLDT_ACCNT_CT'</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Memo Only Accnts Purged">
+			<source>
+				<joinOperation>
+					<joinOperands>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="ACAT"/>
+						</joinOperand>
+						<joinOperand cardinality="1:1">
+							<queryRef refQuery="MRDT"/>
+						</joinOperand>
+					</joinOperands>
+					<joinFilter>
+						<filterExpression>[ACAT].[CRD Number] = [MRDT].[CRD_ID] and
+[ACAT].[Exception Year] = [MRDT].[Exception Year] and
+[ACAT].[Exception Month] = [MRDT].[Exception Month]</filterExpression>
+					</joinFilter>
+				</joinOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[ACAT].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[ACAT].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[MRDT].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>'Memo Only Accounts Purged'</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[ACAT].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[ACAT].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[MRDT].[TTL_MEMO_PRGD_NB]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>'MP'</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[MRDT].[display date]</expression>
+				</dataItem>
+			</selection>
+			<detailFilters>
+				<detailFilter>
+					<filterExpression>?xcptn_ctg? contains [Exception_category] </filterExpression>
+				</detailFilter>
+				<detailFilter>
+					<filterExpression>[VALUE_CD] = 'PRGD_MEMO_ACCNT_CT'</filterExpression>
+				</detailFilter>
+			</detailFilters>
+		</query>
+		<query name="Delivered/Validated Late">
+			<source>
+				<queryOperation name="Union1">
+					<queryRefs>
+						<queryRef refQuery="Delivered Late"/>
+						<queryRef refQuery="validated Late"/>
+					</queryRefs>
+					<projectionList autoGenerated="true">
+						<queryItem name="Firm Name"/>
+						<queryItem name="CRD Number"/>
+						<queryItem name="Exception Period"/>
+						<queryItem name="Exception Name"/>
+						<queryItem name="VALUE_CD"/>
+						<queryItem name="CNTRL_NB"/>
+						<queryItem name="Accounts"/>
+						<queryItem name="Exception_category"/>
+						<queryItem name="display date"/>
+					</projectionList>
+				</queryOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[Union1].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[Union1].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[Union1].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>[Union1].[Exception Name]</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[Union1].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[Union1].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[Union1].[Accounts]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>[Union1].[Exception_category]</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[Union1].[display date]</expression>
+				</dataItem>
+			</selection>
+		</query>
+		<query name="Validated/Non-Validated Accts Purged">
+			<source>
+				<queryOperation name="Union2">
+					<queryRefs>
+						<queryRef refQuery="Validated Accounts Purged"/>
+						<queryRef refQuery="Non_Validated Accts Purged"/>
+					</queryRefs>
+					<projectionList autoGenerated="true">
+						<queryItem name="Firm Name"/>
+						<queryItem name="CRD Number"/>
+						<queryItem name="Exception Period"/>
+						<queryItem name="Exception Name"/>
+						<queryItem name="VALUE_CD"/>
+						<queryItem name="CNTRL_NB"/>
+						<queryItem name="Accounts"/>
+						<queryItem name="Exception_category"/>
+						<queryItem name="display date"/>
+					</projectionList>
+				</queryOperation>
+			</source>
+			<selection>
+				<dataItem name="Firm Name">
+					<expression>[Union2].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[Union2].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[Union2].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>[Union2].[Exception Name]</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[Union2].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[Union2].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[Union2].[Accounts]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>[Union2].[Exception_category]</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[Union2].[display date]</expression>
+				</dataItem>
+			</selection>
+		</query>
+		<query name="Query1">
+			<source>
+				<queryOperation name="Union3">
+					<queryRefs>
+						<queryRef refQuery="Delivered/Validated Late"/>
+						<queryRef refQuery="Validated/Non-Validated Accts Purged"/>
+					</queryRefs>
+					<projectionList autoGenerated="true">
+						<queryItem name="Firm Name"/>
+						<queryItem name="CRD Number"/>
+						<queryItem name="Exception Period"/>
+						<queryItem name="Exception Name"/>
+						<queryItem name="VALUE_CD"/>
+						<queryItem name="CNTRL_NB"/>
+						<queryItem name="Accounts"/>
+						<queryItem name="Exception_category"/>
+						<queryItem name="display date"/>
+					</projectionList>
+				</queryOperation>
+			</source>
+			<selection>
+				<dataItem label="Firm" name="Firm Name">
+					<expression>[Union3].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[Union3].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[Union3].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>[Union3].[Exception Name]</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[Union3].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem name="CNTRL_NB">
+					<expression>[Union3].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[Union3].[Accounts]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>[Union3].[Exception_category]</expression>
+				</dataItem>
+				<dataItem name="display date">
+					<expression>[Union3].[display date]</expression>
+				</dataItem>
+			</selection>
+		</query>
+		<query name="final Query">
+			<source>
+				<queryOperation name="Union4">
+					<queryRefs>
+						<queryRef refQuery="Query1"/>
+						<queryRef refQuery="Memo Only Accnts Purged"/>
+					</queryRefs>
+					<projectionList autoGenerated="true">
+						<queryItem name="Firm Name"/>
+						<queryItem name="CRD Number"/>
+						<queryItem name="Exception Period"/>
+						<queryItem name="Exception Name"/>
+						<queryItem name="VALUE_CD"/>
+						<queryItem name="CNTRL_NB"/>
+						<queryItem name="Accounts"/>
+						<queryItem name="Exception_category"/>
+						<queryItem name="display date"/>
+					</projectionList>
+				</queryOperation>
+			</source>
+			<selection>
+				<dataItem label="Firm" name="Firm Name">
+					<expression>[Union4].[Firm Name]</expression>
+				</dataItem>
+				<dataItem name="CRD Number">
+					<expression>[Union4].[CRD Number]</expression>
+				</dataItem>
+				<dataItem name="Exception Period">
+					<expression>[Union4].[Exception Period]</expression>
+				</dataItem>
+				<dataItem name="Exception Name">
+					<expression>[Union4].[Exception Name]</expression>
+				</dataItem>
+				<dataItem name="VALUE_CD">
+					<expression>[Union4].[VALUE_CD]</expression>
+				</dataItem>
+				<dataItem label="Control Numbers" name="CNTRL_NB">
+					<expression>[Union4].[CNTRL_NB]</expression>
+				</dataItem>
+				<dataItem name="Accounts">
+					<expression>[Union4].[Accounts]</expression>
+				</dataItem>
+				<dataItem name="Exception_category">
+					<expression>[Union4].[Exception_category]</expression>
+				</dataItem>
+				<dataItem label="Exception Period" name="display date">
+					<expression>[Union4].[display date]</expression>
+				</dataItem>
+				<dataItem name="Run By">
+					<expression>?run_by?</expression>
+				</dataItem>
+			</selection>
+		</query>
+	</queries>
+	<reportVariables>
+		<reportVariable name="firm-file variable" type="string">
+			<reportExpression>ParamDisplayValue('pkg_type')</reportExpression>
+			<variableValues>
+				<variableValue value="firm"/>
+				<variableValue value="file"/>
+			</variableValues>
+		</reportVariable>
+	</reportVariables>
+	<drillBehavior modelBasedDrillThru="false"/>
+	<reportName>420.1 | Exception Package - Full</reportName>
+</report>

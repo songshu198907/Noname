@@ -1,0 +1,563 @@
+<report expressionLocale="en-us" useStyleVersion="10" xmlns="http://developer.cognos.com/schemas/report/12.0/">
+    <modelPath>/content/package[@name='REQST_TEST_PKG']/model[@name='2016-04-08T16:25:54.747Z']</modelPath>
+    <drillBehavior modelBasedDrillThru="true"/>
+    <queries>
+        <query name="Query1">
+            <source>
+                <model/>
+            </source>
+            <selection>
+                <dataItem aggregate="none" name="SEQ_NB" rollupAggregate="none">
+                    <expression>[BUSINESS_VIEW].[Filing Meta].[SEQ_NB]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="identifier"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="none" name="FLNG_MODE" rollupAggregate="none">
+                    <expression>[BUSINESS_VIEW].[Filing Meta].[FLNG_MODE]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="3"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="attribute"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="none" name="CRTD_ON_DT" rollupAggregate="none">
+                    <expression>[BUSINESS_VIEW].[Filing Meta].[CRTD_ON_DT]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="4"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="identifier"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="none" name="FIRM_CRD_NB" rollupAggregate="none">
+                    <expression>[BUSINESS_VIEW].[Filing Meta].[FIRM_CRD_NB]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="attribute"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3938_AM">
+                    <expression>[BUSINESS_VIEW].[Statement Of Income].[FIELD_3938_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3939_AM">
+                    <expression>[BUSINESS_VIEW].[Statement Of Income].[FIELD_3939_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3941_AM">
+                    <expression>[BUSINESS_VIEW].[Statement Of Income].[FIELD_3941_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3560_AM">
+                    <expression>[BUSINESS_VIEW].[Net Capital Computation].[FIELD_3560_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3570_AM">
+                    <expression>[BUSINESS_VIEW].[Net Capital Computation].[FIELD_3570_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3580_AM">
+                    <expression>[BUSINESS_VIEW].[Net Capital Computation].[FIELD_3580_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+                <dataItem aggregate="total" name="FIELD_3590_AM">
+                    <expression>[BUSINESS_VIEW].[Net Capital Computation].[FIELD_3590_AM]</expression>
+                    <XMLAttributes>
+                        <XMLAttribute name="RS_dataType" output="no" value="1"/>
+                        <XMLAttribute name="RS_dataUsage" output="no" value="fact"/>
+                    </XMLAttributes>
+                </dataItem>
+            </selection>
+        </query>
+    </queries>
+    <layouts>
+        <layout>
+            <reportPages>
+                <page name="Page1">
+                    <style>
+                        <defaultStyles>
+                            <defaultStyle refStyle="pg"/>
+                        </defaultStyles>
+                    </style>
+                    <pageBody>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="pb"/>
+                            </defaultStyles>
+                        </style>
+                        <contents>
+                            <list horizontalPagination="true" name="List1" refQuery="Query1">
+                                <noDataHandler>
+                                    <contents>
+                                        <block>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <staticValue>No Data Available</staticValue>
+                                                    </dataSource>
+                                                    <style>
+                                                        <CSS value="padding:10px 18px;"/>
+                                                    </style>
+                                                </textItem>
+                                            </contents>
+                                        </block>
+                                    </contents>
+                                </noDataHandler>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="ls"/>
+                                    </defaultStyles>
+                                    <CSS value="border-collapse:collapse"/>
+                                </style>
+                                <listColumns>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="SEQ_NB"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lc"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="SEQ_NB"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FLNG_MODE"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lc"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FLNG_MODE"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="CRTD_ON_DT"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lc"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="CRTD_ON_DT"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIRM_CRD_NB"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lc"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIRM_CRD_NB"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3938_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3938_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3939_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3939_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3941_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3941_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3560_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3560_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3570_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3570_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3580_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3580_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                    <listColumn>
+                                        <listColumnTitle>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lt"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemLabel refDataItem="FIELD_3590_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnTitle>
+                                        <listColumnBody>
+                                            <style>
+                                                <defaultStyles>
+                                                    <defaultStyle refStyle="lm"/>
+                                                </defaultStyles>
+                                            </style>
+                                            <contents>
+                                                <textItem>
+                                                    <dataSource>
+                                                        <dataItemValue refDataItem="FIELD_3590_AM"/>
+                                                    </dataSource>
+                                                </textItem>
+                                            </contents>
+                                        </listColumnBody>
+                                    </listColumn>
+                                </listColumns>
+                            </list>
+                        </contents>
+                    </pageBody>
+                    <pageHeader>
+                        <contents>
+                            <block>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="ta"/>
+                                    </defaultStyles>
+                                </style>
+                                <contents>
+                                    <textItem>
+                                        <style>
+                                            <defaultStyles>
+                                                <defaultStyle refStyle="tt"/>
+                                            </defaultStyles>
+                                        </style>
+                                        <dataSource>
+                                            <staticValue/>
+                                        </dataSource>
+                                    </textItem>
+                                </contents>
+                            </block>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="ph"/>
+                            </defaultStyles>
+                            <CSS value="padding-bottom:10px"/>
+                        </style>
+                    </pageHeader>
+                    <pageFooter>
+                        <contents>
+                            <table>
+                                <tableRows>
+                                    <tableRow>
+                                        <tableCells>
+                                            <tableCell>
+                                                <contents>
+                                                    <date>
+                                                        <style>
+                                                            <dataFormat>
+                                                                <dateFormat/>
+                                                            </dataFormat>
+                                                        </style>
+                                                    </date>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:left;width:25%"/>
+                                                </style>
+                                            </tableCell>
+                                            <tableCell>
+                                                <contents>
+                                                    <pageNumber/>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:center;width:50%"/>
+                                                </style>
+                                            </tableCell>
+                                            <tableCell>
+                                                <contents>
+                                                    <time>
+                                                        <style>
+                                                            <dataFormat>
+                                                                <timeFormat/>
+                                                            </dataFormat>
+                                                        </style>
+                                                    </time>
+                                                </contents>
+                                                <style>
+                                                    <CSS value="vertical-align:top;text-align:right;width:25%"/>
+                                                </style>
+                                            </tableCell>
+                                        </tableCells>
+                                    </tableRow>
+                                </tableRows>
+                                <style>
+                                    <defaultStyles>
+                                        <defaultStyle refStyle="tb"/>
+                                    </defaultStyles>
+                                    <CSS value="border-collapse:collapse;width:100%"/>
+                                </style>
+                            </table>
+                        </contents>
+                        <style>
+                            <defaultStyles>
+                                <defaultStyle refStyle="pf"/>
+                            </defaultStyles>
+                            <CSS value="padding-top:10px"/>
+                        </style>
+                    </pageFooter>
+                </page>
+            </reportPages>
+        </layout>
+    </layouts>
+    <XMLAttributes>
+        <XMLAttribute name="RS_CreateExtendedDataItems" output="no" value="true"/>
+        <XMLAttribute name="listSeparator" output="no" value=","/>
+        <XMLAttribute name="RS_modelModificationTime" output="no" value="2016-04-08T16:25:54.887Z"/>
+    </XMLAttributes>
+    <reportName>Test Report _1</reportName>
+</report>
