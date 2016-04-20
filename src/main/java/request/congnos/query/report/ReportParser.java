@@ -245,7 +245,8 @@ public class ReportParser implements ReportOp {
                 info.setReportTableName(tmp[1].trim());
                 info.setReportColName(tmp[2].trim());
             }
-            infoList.add(info);
+            if (!infoList.contains(info))
+                infoList.add(info);
         } else {
             List<String> list = queryMap.get(key);
             for (String str : list) {
