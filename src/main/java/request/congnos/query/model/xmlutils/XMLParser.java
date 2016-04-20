@@ -289,7 +289,7 @@ public class XMLParser {
             return;
         } else {
             layers.stream().forEach(layer -> {
-                        LOGGER.info(fileName + "." + layer + " has been changed or hasn't been serialized .\n It needs to be parse!");
+                LOGGER.info(fileName + "." + layer + " has been changed or hasn't been serialized .\n It needs to be parsed!");
                         checkSumMap.put(fileName + "." + layer, digest);
                     }
             );

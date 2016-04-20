@@ -790,7 +790,7 @@
                 </dataItem>
                 <dataItem aggregate="none" name="ReportDate-1" rollupAggregate="none">
                     <expression>to_char(add_months(to_date([REQST_MRDT Business
-                        Layer].[ReportMonth],'YYYYMM'),-1),'YYYYMM')
+                        Layer].[Report Month],'YYYYMM'),-1),'YYYYMM')
                     </expression>
                 </dataItem>
                 <dataItem aggregate="none" name="ReportDate-2" rollupAggregate="none">

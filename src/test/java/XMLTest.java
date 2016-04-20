@@ -60,14 +60,15 @@ public class XMLTest {
     @Test
     public void testReport() throws IOException, NoSuchAlgorithmException {
         ReportParser parser = new ReportParser("report_model.xml");
-        parser.load("report_spec2.xml");
-        parser.export(new File("report_spec2_2.xlsx"));
-        parser.load("report_spec1.xml");
-        parser.export(new File("report_spec1_2.xlsx"));
-        parser = new ReportParser("mrdt_model.xml");
-        parser.load("mrdt_report.xml");
-        parser.export(new File("mrdt_report2.xlsx"));
-
+//        parser.load("report_spec2.xml");
+//        parser.export(new File("report_spec2_2.xlsx"));
+//        parser.load("report_spec1.xml");
+//        parser.export(new File("report_spec1_2.xlsx"));
+//        parser = new ReportParser("mrdt_model.xml");
+        parser.load("acat_report.xml");
+        parser.export(new File("3.xlsx"));
+//        parser.load("selector_report.xml");
+//        parser.export(new File("selector_report2.xlsx"));
 
     }
 

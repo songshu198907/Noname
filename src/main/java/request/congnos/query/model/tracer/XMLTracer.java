@@ -164,7 +164,7 @@ public class XMLTracer implements Callable {
             String tmp = endNodes.get(0).getStringValue();
             tmp = tmp.substring(tmp.lastIndexOf("[") + 1, tmp.lastIndexOf("]"));
             String[] dbs = searchDB(tmp);
-//            map.setDbName(dbs[0]);
+            map.setDbName(dbs[0]);
             map.setSchema(dbs[1]);
             map.setTable(table);
             map.setColName(col);

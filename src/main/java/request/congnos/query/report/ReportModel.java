@@ -2,7 +2,6 @@ package request.congnos.query.report;
 
 import request.congnos.query.model.xmlutils.MapInfo;
 
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,7 +10,7 @@ import java.util.Set;
 public class ReportModel {
     private String name;
     private String refDataItem;
-    private List<String> expression;
+    private String expression;
     private Set<MapInfo> infos;
 
     public String getName() {
@@ -30,11 +29,11 @@ public class ReportModel {
         this.refDataItem = refDataItem;
     }
 
-    public List<String> getExpression() {
+    public String getExpression() {
         return expression;
     }
 
-    public void setExpression(List<String> expression) {
+    public void setExpression(String expression) {
         this.expression = expression;
     }
 

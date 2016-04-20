@@ -100,19 +100,19 @@ public class MapInfo implements Comparable, Serializable {
     }
 
     public static class DataView implements Serializable {
-
         private static final long serialVersionUID = 1L;
+        protected String dbName;
         protected String table;
         protected String schema;
         protected String colName;
 
-//        public String getDbName() {
-//            return dbName;
-//        }
-//
-//        public void setDbName(String dbName) {
-//            this.dbName = dbName;
-//        }
+        public String getDbName() {
+            return dbName;
+        }
+
+        public void setDbName(String dbName) {
+            this.dbName = dbName;
+        }
 
         public String getTable() {
             return table;
@@ -141,7 +141,8 @@ public class MapInfo implements Comparable, Serializable {
         @Override
         public String toString() {
             return "DataView{" +
-                    "table='" + table + '\'' +
+                    "dbName='" + dbName + '\'' +
+                    ", table='" + table + '\'' +
                     ", schema='" + schema + '\'' +
                     ", colName='" + colName + '\'' +
                     '}';

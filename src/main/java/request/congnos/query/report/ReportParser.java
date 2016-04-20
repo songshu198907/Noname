@@ -28,6 +28,7 @@ public class ReportParser implements ReportOp {
     private XMLParser parser;
     private String modelFileName;
     private List<ReportModel> further, stop;
+    private HashMap<String, List<String>> queryMap;
 
     public ReportParser(String modelFileName) {
         layers = new HashSet<>();
@@ -36,6 +37,7 @@ public class ReportParser implements ReportOp {
         further = new ArrayList<>();
         stop = new ArrayList<>();
         itemsMap = new HashMap<>();
+        queryMap = new HashMap<>();
 
 
     }
@@ -56,12 +58,11 @@ public class ReportParser implements ReportOp {
     @Override
     public void parse() {
         loadItemMap();
-
+        loadQueryMap();
         searchDataItem();
         LOGGER.info("Report parsing done!");
         try {
             XMLParser.run(modelFileName, layers);
-//            XMLParser.reload(modelFileName, layers);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -134,6 +135,16 @@ public class ReportParser implements ReportOp {
                 if (itemsMap.containsKey(model.getRefDataItem())) {
 
                     model.setExpression(itemsMap.get(model.getRefDataItem()));
+                } else if (queryMap.containsKey(model.getRefDataItem())) {
+                    List<String> exps = queryMap.get(model.getRefDataItem());
+                    StringBuilder sb = new StringBuilder();
+                    for (String str : exps) {
+                        sb.append(str + "\\n");
+                    }
+                    model.setExpression(sb.toString());
+                    traceQueryItem(model, exps);
+                    System.exit(1);
+
                 } else {
                     model.setExpression("Sorry, it is join stuff .");
                 }
@@ -145,22 +156,42 @@ public class ReportParser implements ReportOp {
         LOGGER.info("Report parsed successfully.");
     }
 
+    private void traceQueryItem(ReportModel model, List<String> exps) {
+        Pattern pattern = Pattern.compile("(\\[([^\\[\\]]*)?]\\.){1,2}\\[([^\\[\\]]*)?]");
+        Pattern calPatt = Pattern.compile("](\\s)*(\\+|-|\\*|/)(\\s)*\\[");
+        boolean flag = false;
+        List<String> totalRef = new ArrayList<>();
+        for (String exp : exps) {
+            LOGGER.info("exp " + exp);
+            if (exp.contains("[")) {
+                if (calPatt.matcher(exp).find() && !exp.contains("case")) {
+                    String tmp = searchCalc(exp, exp.substring(exp.indexOf("[") + 1, exp.indexOf("]")));
+                    Matcher matcher = pattern.matcher(tmp);
+                    while (matcher.find()) {
+                        LOGGER.info(matcher.group());
+                    }
+                }
+            }
+        }
+        if (!flag) {
+            stop.add(model);
+        }
+
+    }
+
     private void traceItem(ReportModel model) {
         Pattern pattern = Pattern.compile("(\\[([^\\[\\]]*)?]\\.){1,2}\\[([^\\[\\]]*)?]");
         Pattern calPatt = Pattern.compile("](\\s)*(\\+|-|\\*|/)(\\s)*\\[");
         if (model.getExpression().contains("[")) {
             String exp = model.getExpression();
             String refData = model.getRefDataItem();
-
             if (calPatt.matcher(exp).find() && !exp.contains("case")) {
                 refData = searchCalc(exp, refData.split("\\.")[0]);
                 Matcher matcher = pattern.matcher(refData);
                 while (matcher.find()) {
                     buildMapInfo(model, matcher.group());
                 }
-
                 model.setRefDataItem(refData);
-
             } else {
                 refData = exp;
                 Matcher matcher = pattern.matcher(refData);
@@ -182,6 +213,15 @@ public class ReportParser implements ReportOp {
 
     }
 
+    private void buildQueryMapInfo(ReportModel model, String exp) {
+        String[] components = exp.split("\\.");
+        String layerName = components[0].substring(components[0].indexOf("[") + 1, components[0].indexOf("]"));
+        if (!layers.contains(layerName)) {
+            layers.add(layerName);
+        }
+
+    }
+
     private void buildMapInfo(ReportModel model, String exp) {
         String[] components = exp.split("\\.");
         MapInfo info = new MapInfo();
@@ -197,9 +237,9 @@ public class ReportParser implements ReportOp {
             info.setReportTableName(components[1].substring(components[1].indexOf("[") + 1, components[1].indexOf("]")));
             info.setReportColName(components[2].substring(components[2].indexOf("[") + 1, components[2].indexOf("]")));
         }
-        Set<MapInfo> infos;
+
         if (model.getInfos() == null) {
-            infos = new HashSet<>();
+            Set infos = new HashSet<>();
             model.setInfos(infos);
         }
         if (!model.getInfos().contains(info)) {
@@ -208,6 +248,7 @@ public class ReportParser implements ReportOp {
         }
 
     }
+
 
     private String findRoot(String key) {
         Pattern pattern = Pattern.compile("(\\[([^\\[\\]]*)?]\\.){1,2}\\[(.*)?]");
@@ -237,8 +278,8 @@ public class ReportParser implements ReportOp {
     private String searchCalc(String exp, String schema) {
 
         String[] rows = exp.
-                replaceAll("](\\s)*(\\+|-|\\*|/)(\\s)*\\[", "];[").
-                split(";")
+                replaceAll("][\\s\\)\\(]*(\\+|-|\\*|/)[\\s\\()]*\\[", "];[").
+                split(";");
         for (String str : rows) {
             String key;
             if (str.indexOf("[") == str.lastIndexOf("[")) {
@@ -275,6 +316,51 @@ public class ReportParser implements ReportOp {
         further.clear();
         stop.clear();
 
+
+    }
+
+    private List<Node> search(String path, Object context) {
+        XPath xPath = document.createXPath(path);
+        return xPath.selectNodes(context);
+    }
+
+    private void loadQueryMap() {
+        String query = "//queries/query";
+        List<Node> queries = search(query, document);
+        queries.stream().forEach(node -> {
+            String queryName = node.selectSingleNode("./@name").getStringValue();
+            if (node.selectSingleNode(".//queryOperation") == null) {
+                List<Node> dataItems = node.selectNodes("./selection/dataItem");
+                dataItems.stream().forEach(dataItem -> {
+                    ArrayList<String> list = new ArrayList<String>();
+                    String dIName = dataItem.selectSingleNode("./@name").getStringValue();
+                    String expression = dataItem.selectSingleNode("./expression").getStringValue();
+                    if (expression.contains("[")) {
+                        if (expression.indexOf("[") == expression.lastIndexOf("[")) {
+                            expression = "[" + queryName.trim() + "]" + "." + expression;
+                        }
+                    }
+                    String key = queryName.trim() + "." + dIName.trim();
+                    list.add(expression);
+                    queryMap.put(key, list);
+                });
+            } else {
+                Set<String> queryRefList = new HashSet<String>();
+                List<Node> refNodes = node.selectNodes(".//queryRefs/queryRef/@refQuery");
+                refNodes.stream().forEach(ref -> queryRefList.add(ref.getStringValue()));
+                List<Node> queryItems = node.selectNodes(".//queryItem/@name");
+                queryItems.stream().forEach(queryItem -> {
+                    String itemName = queryItem.getStringValue();
+                    List<String> list = new ArrayList<String>();
+                    String key = queryName.trim() + "." + itemName.trim();
+                    for (String str : queryRefList) {
+                        String val = "[" + str.trim() + "]" + "." + "[" + itemName.trim() + "]";
+                        list.add(val);
+                    }
+                    queryMap.put(key, list);
+                });
+            }
+        });
 
     }
 
