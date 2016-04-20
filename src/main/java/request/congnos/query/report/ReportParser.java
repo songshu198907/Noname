@@ -169,6 +169,14 @@ public class ReportParser implements ReportOp {
                     Matcher matcher = pattern.matcher(tmp);
                     while (matcher.find()) {
                         LOGGER.info(matcher.group());
+                        String key = matcher.group();
+                        buildQueryMapInfo(model, key);
+                    }
+                } else {
+                    Matcher matcher = pattern.matcher(exp);
+                    while (matcher.find()) {
+                        String key = matcher.group();
+                        buildQueryMapInfo(model, key);
                     }
                 }
             }
@@ -219,7 +227,32 @@ public class ReportParser implements ReportOp {
         if (!layers.contains(layerName)) {
             layers.add(layerName);
         }
+        List<MapInfo> infos = new ArrayList<>();
+        findQueryRoot(infos, exp.replaceAll("\\[", "").replaceAll("]", ""));
+        LOGGER.info("Size :" + infos.size());
 
+    }
+
+    private void findQueryRoot(List<MapInfo> infoList, String key) {
+        if (!queryMap.containsKey(key)) {
+            MapInfo info = new MapInfo();
+            String[] tmp = key.split("\\.");
+            info.setBusinessLayer(tmp[0].trim());
+//            info.setReportColName(tmp[1].trim());
+            if (tmp.length == 2) {
+                info.setReportColName(tmp[1].trim());
+            } else if (tmp.length == 3) {
+                info.setReportTableName(tmp[1].trim());
+                info.setReportColName(tmp[2].trim());
+            }
+            infoList.add(info);
+        } else {
+            List<String> list = queryMap.get(key);
+            for (String str : list) {
+                String val = str.replaceAll("\\[", "").replaceAll("]", "");
+                findQueryRoot(infoList, val);
+            }
+        }
     }
 
     private void buildMapInfo(ReportModel model, String exp) {
